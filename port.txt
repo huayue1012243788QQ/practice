@@ -1,0 +1,7 @@
+19000 eureka-server
+19006 job-service
+19015 resume-service
+19005 auth-service
+19007 user-service
+19001 zuul-service
+19008 admin-service
