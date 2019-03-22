@@ -1,6 +1,8 @@
 package com.huayue.job.service;
 
-import com.huayue.common.enums.Check;
+import com.huayue.common.enums.check.Check;
+import com.huayue.common.enums.EducationRank;
+import com.huayue.common.exception.CheckRepeatException;
 import com.huayue.common.exception.NotFoundException;
 import com.huayue.common.exception.UncheckException;
 import com.huayue.common.repository.BaseRepository;
@@ -11,7 +13,16 @@ import com.huayue.job.repository.CompanyRepository;
 import com.huayue.job.repository.JobRepository;
 import com.huayue.job.repository.JobTypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
+
+import javax.persistence.criteria.Predicate;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author huayue.
@@ -41,6 +52,7 @@ public class JobService extends BaseService<Job> {
         if (!jobTypeRepository.existsById(job.getJobTypeId())) {
             throw new NotFoundException(job.getJobTypeId());
         }
+        job.setChecked(Check.UNCHECKED.toString());
         return jobRepository.save(job);
     }
 
@@ -56,6 +68,7 @@ public class JobService extends BaseService<Job> {
         }
         Job job1 = jobRepository.findById(job.getId()).get();
         BeanUtil.copyNonNullProperties(job,job1);
+        job1.setChecked(Check.UNCHECKED.toString());
         return jobRepository.saveAndFlush(job1);
     }
     public void delete(String id) {
@@ -63,5 +76,54 @@ public class JobService extends BaseService<Job> {
             throw new NotFoundException(id);
         }
         jobRepository.delete(jobRepository.findById(id).get());
+    }
+    public Page<Job> queryForList(String title,
+                                  Integer minSalary,
+                                  Integer maxSalary,
+                                  Integer workDay,
+                                  Integer workTime,
+                                  String educationRank,
+                                  String city,
+                                  Integer page,
+                                  Integer size) {
+        Pageable pageable = PageRequest.of(page,size, Sort.Direction.DESC,"id");
+        Page<Job> jobs = jobRepository.findAll((root, query, criteriaBuilder) -> {
+            List<Predicate> predicates = new ArrayList<>();
+            if (!StringUtils.isEmpty(title)) {
+                predicates.add(criteriaBuilder.like(root.get("title").as(String.class),"%" + title +"%"));
+            }
+            if (minSalary != null) {
+                predicates.add(criteriaBuilder.greaterThanOrEqualTo(root.get("minSalary").as(int.class),minSalary));
+            }
+            if (maxSalary != null) {
+                predicates.add(criteriaBuilder.lessThanOrEqualTo(root.get("maxSalary").as(int.class),maxSalary));
+            }
+            if (workDay != null) {
+                predicates.add(criteriaBuilder.equal(root.get("workDay").as(int.class),workDay));
+            }
+            if (workTime != null) {
+                predicates.add(criteriaBuilder.equal(root.get("workTime").as(int.class),workTime));
+            }
+            if (!StringUtils.isEmpty(educationRank) && EducationRank.check(educationRank)) {
+                predicates.add(criteriaBuilder.equal(root.get("educationRank").as(String.class),educationRank));
+            }
+            if (!StringUtils.isEmpty(city)) {
+                predicates.add(criteriaBuilder.equal(root.get("city").as(String.class),city));
+            }
+            predicates.add(criteriaBuilder.equal(root.get("checked").as(String.class),Check.CHECKED.toString()));
+            return criteriaBuilder.and(predicates.toArray(new Predicate[predicates.size()]));
+        }, pageable);
+        return jobs;
+    }
+    public Job check(String id) {
+        if (!jobRepository.existsById(id)) {
+            throw new NotFoundException(id);
+        }
+        Job job = jobRepository.findById(id).get();
+        if (job.getChecked().equals(Check.CHECKED)) {
+            throw new CheckRepeatException();
+        }
+        job.setChecked(Check.CHECKED.toString());
+        return jobRepository.saveAndFlush(job);
     }
 }

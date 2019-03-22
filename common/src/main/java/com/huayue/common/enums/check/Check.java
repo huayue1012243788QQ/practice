@@ -1,4 +1,4 @@
-package com.huayue.common.enums;
+package com.huayue.common.enums.check;
 
 /**
  * @author huayue.

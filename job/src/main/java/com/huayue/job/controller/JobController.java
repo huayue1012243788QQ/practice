@@ -1,6 +1,7 @@
 package com.huayue.job.controller;
 
 import com.huayue.common.constant.MessageConst;
+import com.huayue.common.exception.CheckRepeatException;
 import com.huayue.common.exception.NotFoundException;
 import com.huayue.common.exception.UncheckException;
 import com.huayue.common.global.Result;
@@ -8,6 +9,8 @@ import com.huayue.job.entity.Job;
 import com.huayue.job.service.JobService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -78,6 +81,42 @@ public class JobController {
         try {
             job = jobService.findById(id);
         } catch (NotFoundException e) {
+            return Result.failure(e.getRetCd(),e.getMsgDes());
+        }
+        return Result.success(job);
+    }
+    @GetMapping("/list")
+    public Object queryForList(@RequestParam(required = false) String title,
+                               @RequestParam(required = false) Integer minSalary,
+                               @RequestParam(required = false) Integer maxSalary,
+                               @RequestParam(required = false) Integer workDay,
+                               @RequestParam(required = false) Integer workTime,
+                               @RequestParam(required = false) String educationRank,
+                               @RequestParam(required = false) String city,
+                               @RequestParam Integer page,
+                               @RequestParam Integer size) {
+        page -= 1;
+        if (size == 0) {
+            size =1;
+        }
+        Page<Job> jobs = jobService.queryForList(title,minSalary,maxSalary,workDay,workTime,educationRank,city,page,size);
+        if (jobs.getTotalElements() == 0) {
+            return Result.success(MessageConst.NOTHING_FOUND_MESSAGE);
+        }
+        return Result.success(jobs);
+    }
+    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN','ROLE_REVIEWER')")
+    @PatchMapping("/{id}")
+    public Object checkJob(@PathVariable String id) {
+        if (StringUtils.isEmpty(id)) {
+            return Result.failure(MessageConst.ID_NULL_MESSAGE);
+        }
+        Job job;
+        try {
+            job = jobService.check(id);
+        } catch (NotFoundException e) {
+            return Result.failure(e.getRetCd(),e.getMsgDes());
+        } catch (CheckRepeatException e) {
             return Result.failure(e.getRetCd(),e.getMsgDes());
         }
         return Result.success(job);

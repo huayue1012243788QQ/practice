@@ -12,4 +12,13 @@ public enum EducationRank {
     UNDERGRADUATE,
     MASTER,
     DOCTOR;
+    public static boolean check(String rank) {
+        for (EducationRank educationRank:
+             EducationRank.values()) {
+            if (rank.equals(educationRank)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

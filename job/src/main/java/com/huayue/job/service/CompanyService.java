@@ -1,6 +1,6 @@
 package com.huayue.job.service;
 
-import com.huayue.common.enums.Check;
+import com.huayue.common.enums.check.Check;
 import com.huayue.common.exception.CheckRepeatException;
 import com.huayue.common.exception.NotFoundException;
 import com.huayue.common.exception.RepeatException;
@@ -49,6 +49,7 @@ public class CompanyService extends BaseService<Company> {
         if (result.getCode() != Result.SUCCESS) {
             throw new NotFoundException(company.getUserId());
         }
+        company.setChecked(Check.UNCHECKED.toString());
         return companyRepository.saveAndFlush(company);
     }
     public Company update(Company company) {
@@ -65,6 +66,7 @@ public class CompanyService extends BaseService<Company> {
         }
         Company company1 = companyRepository.findById(company.getId()).get();
         BeanUtil.copyNonNullProperties(company,company1);
+        company1.setChecked(Check.UNCHECKED.toString());
         return companyRepository.saveAndFlush(company1);
     }
     public void delete(String id) {
@@ -88,7 +90,7 @@ public class CompanyService extends BaseService<Company> {
         if (company.getChecked().equals(Check.CHECKED)) {
             throw new CheckRepeatException();
         }
-        company.setChecked(Check.CHECKED);
+        company.setChecked(Check.CHECKED.toString());
         return companyRepository.saveAndFlush(company);
     }
 }

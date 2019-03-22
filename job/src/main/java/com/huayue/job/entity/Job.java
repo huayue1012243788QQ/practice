@@ -3,6 +3,7 @@ package com.huayue.job.entity;
 import com.huayue.common.entity.CheckEntity;
 import com.huayue.common.enums.EducationRank;
 import lombok.Data;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 
@@ -14,6 +15,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "job")
 @Data
+@EntityListeners(AuditingEntityListener.class)
 public class Job extends CheckEntity {
     private String title;
     private int minSalary;

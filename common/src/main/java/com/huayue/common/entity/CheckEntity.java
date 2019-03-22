@@ -1,10 +1,8 @@
 package com.huayue.common.entity;
 
-import com.huayue.common.enums.Check;
+import com.huayue.common.enums.check.Check;
 import lombok.Data;
 
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.MappedSuperclass;
 
 /**
@@ -15,6 +13,5 @@ import javax.persistence.MappedSuperclass;
 @MappedSuperclass
 @Data
 public abstract class CheckEntity extends SuperEntity {
-    @Enumerated(EnumType.STRING)
-    private Check checked = Check.UNCHECKED;
+    private String checked = Check.UNCHECKED.toString();
 }

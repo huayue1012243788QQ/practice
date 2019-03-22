@@ -42,4 +42,10 @@ public class ExceptionConst {
      */
     public static int UNCHECK_CODE = 306;
     public static String UNCHECK_MSG = "未审核的对象ID值：";
+    /**
+     * 审核失败
+     */
+    public static int CHECK_ERROR_CODE = 307;
+    public static String CHECK_ERROR_MSG = "审核失败";
+
 }
