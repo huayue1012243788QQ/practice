@@ -26,6 +26,7 @@ public class Job extends CheckEntity {
     private EducationRank educationRank; //学历
     private String description;
     private String address;
+    private String city;
     private String jobTypeId;
     private String companyId;
 }

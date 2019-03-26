@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 public class MyFilter extends ZuulFilter {
     private static String LOGIN_URI = "/api/user/user/login";
     private static String REGISTER_URI = "/api/user/user/";
-    private static String ROLE_URI = "/api/user /role/user-role";
+    private static String ROLE_URI = "/api/user/role/user-role";
     @Override
     public String filterType() {
         return "pre";
@@ -45,6 +45,9 @@ public class MyFilter extends ZuulFilter {
         if (uri.equals(LOGIN_URI) || (uri.equals(REGISTER_URI) && method.equals("POST")) || uri.endsWith("/v2/api-docs") || uri.equals(ROLE_URI)) {
             return null;
         }
+        if (method.equals("OPTIONS")) {
+            return null;
+        }
         // 获取token
         String token = request.getHeader("Authorization");
         if (token == null) {
@@ -54,28 +57,6 @@ public class MyFilter extends ZuulFilter {
             TokenNullException e = new TokenNullException();
             String response = JSON.toJSONString(Result.failure(e.getRetCd(),e.getMsgDes()));
             context.setResponseBody(response);
-//            Writer writer = null;
-//            try {
-//                // 获取输出流
-////                context.getResponse().setHeader("Content-type", "text/html;charset=UTF-8");
-//                context.getResponse().setContentType("application/json;charset=UTF-8");
-////                writer = context.getResponse().getWriter();
-//                TokenNullException e = new TokenNullException();
-//                String response = JSON.toJSONString(Result.failure(e.getRetCd(),e.getMsgDes()));
-////                writer.write(response);
-//                context.setResponseBody(response);
-//            } catch (Exception e) {
-////                System.out.println(e.toString());
-//            } finally {
-//                if (writer != null) {
-//                    try {
-//                        // 关闭流
-//                        writer.close();
-//                    } catch (IOException e) {
-//                        System.out.println(e.toString());
-//                    }
-//                }
-//            }
         } else {
             context.setSendZuulResponse(true);
             context.setResponseStatusCode(200);
