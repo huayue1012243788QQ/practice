@@ -11,11 +11,12 @@ public enum EducationRank {
     JUNIOR_COLLEGE,
     UNDERGRADUATE,
     MASTER,
-    DOCTOR;
+    DOCTOR,
+    WHATEVER;
     public static boolean check(String rank) {
         for (EducationRank educationRank:
              EducationRank.values()) {
-            if (rank.equals(educationRank)) {
+            if (rank.equals(educationRank.toString())) {
                 return true;
             }
         }

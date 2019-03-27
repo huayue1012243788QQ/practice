@@ -2,11 +2,13 @@ package com.huayue.job.controller;
 
 import com.huayue.common.constant.MessageConst;
 import com.huayue.common.exception.CheckRepeatException;
+import com.huayue.common.exception.EnumErrorException;
 import com.huayue.common.exception.NotFoundException;
 import com.huayue.common.exception.UncheckException;
 import com.huayue.common.global.Result;
 import com.huayue.job.entity.Job;
 import com.huayue.job.service.JobService;
+import com.huayue.job.vo.JobVO;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -43,6 +45,8 @@ public class JobController {
             return Result.failure(e.getRetCd(),e.getMsgDes());
         } catch (UncheckException e) {
             return Result.failure(e.getRetCd(),e.getMsgDes());
+        } catch (EnumErrorException e) {
+            return Result.failure(e.getRetCd(),e.getMsgDes());
         }
         return Result.success(job1);
     }
@@ -55,6 +59,8 @@ public class JobController {
         try {
             job1 = jobService.update(job);
         } catch (NotFoundException e) {
+            return Result.failure(e.getRetCd(),e.getMsgDes());
+        } catch (EnumErrorException e) {
             return Result.failure(e.getRetCd(),e.getMsgDes());
         }
         return Result.success(job1);
@@ -77,13 +83,13 @@ public class JobController {
         if (StringUtils.isEmpty(id)) {
             return Result.failure(MessageConst.ID_NULL_MESSAGE);
         }
-        Job job;
+        JobVO jobVO;
         try {
-            job = jobService.findById(id);
+            jobVO = jobService.findOneById(id);
         } catch (NotFoundException e) {
             return Result.failure(e.getRetCd(),e.getMsgDes());
         }
-        return Result.success(job);
+        return Result.success(jobVO);
     }
     @GetMapping("/list")
     public Object queryForList(@RequestParam(required = false) String title,

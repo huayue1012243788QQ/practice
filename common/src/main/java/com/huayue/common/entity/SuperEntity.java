@@ -1,5 +1,6 @@
 package com.huayue.common.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.data.annotation.CreatedBy;
@@ -29,9 +30,11 @@ public abstract class SuperEntity implements Serializable {
     @CreatedBy
     private String createBy;
     @CreatedDate
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date createTime;
     @LastModifiedBy
     private String lastUpdateBy;
     @LastModifiedDate
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date lastUpdateTime;
 }

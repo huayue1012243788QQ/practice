@@ -22,4 +22,7 @@ public class Company extends CheckEntity {
     @Transient
     private List<Job> jobs;
     private String userId;
+    @Transient
+    private Industry industry;
+    private String image;
 }

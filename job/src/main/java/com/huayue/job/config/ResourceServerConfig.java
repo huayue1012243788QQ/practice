@@ -19,7 +19,15 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/webjars/**","/resources/**","/swagger-resources/**","/swagger-ui.html#/","/swagger-ui.html#","/api-doc","/v2/api-docs").permitAll()
+                .antMatchers("/webjars/**",
+                        "/resources/**",
+                        "/swagger-resources/**",
+                        "/swagger-ui.html#/",
+                        "/swagger-ui.html#",
+                        "/api-doc",
+                        "/v2/api-docs",
+                        "/job/{id}",
+                        "/{id}").permitAll()
                 .anyRequest().authenticated();
     }
 

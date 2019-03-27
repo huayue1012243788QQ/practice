@@ -20,6 +20,8 @@ public class MyFilter extends ZuulFilter {
     private static String LOGIN_URI = "/api/user/user/login";
     private static String REGISTER_URI = "/api/user/user/";
     private static String ROLE_URI = "/api/user/role/user-role";
+    private static String JOB_LIST_URI = "/api/company/job/";
+    private static String COMPANY_URI = "/api/company/";
     @Override
     public String filterType() {
         return "pre";
@@ -42,10 +44,13 @@ public class MyFilter extends ZuulFilter {
         HttpServletRequest request = context.getRequest();
         String uri = request.getRequestURI();
         String method = request.getMethod();
-        if (uri.equals(LOGIN_URI) || (uri.equals(REGISTER_URI) && method.equals("POST")) || uri.endsWith("/v2/api-docs") || uri.equals(ROLE_URI)) {
-            return null;
-        }
-        if (method.equals("OPTIONS")) {
+        if (uri.equals(LOGIN_URI)
+                || (uri.equals(REGISTER_URI) && method.equals("POST"))
+                || uri.endsWith("/v2/api-docs")
+                || uri.equals(ROLE_URI)
+                || (uri.contains(JOB_LIST_URI) && method.equals("GET"))
+                || method.equals("OPTIONS")
+                || (uri.contains(COMPANY_URI) && method.equals("GET"))) {
             return null;
         }
         // 获取token

@@ -7,6 +7,7 @@ import com.huayue.common.exception.RepeatException;
 import com.huayue.common.global.Result;
 import com.huayue.job.entity.Company;
 import com.huayue.job.service.CompanyService;
+import com.huayue.job.vo.CompanyVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -80,13 +81,13 @@ public class CompanyController {
         if (StringUtils.isEmpty(id)) {
             return Result.failure(MessageConst.ID_NULL_MESSAGE);
         }
-        Company company;
+        CompanyVO companyVO;
         try {
-            company = companyService.findById(id);
+            companyVO = companyService.findOneById(id);
         } catch (NotFoundException e) {
             return Result.failure(e.getRetCd(),e.getMsgDes());
         }
-        return Result.success(company);
+        return Result.success(companyVO);
     }
     @PatchMapping("/{id}")
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN','ROLE_REVIEWER')")

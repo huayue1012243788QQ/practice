@@ -10,10 +10,13 @@ import com.huayue.common.service.BaseService;
 import com.huayue.common.util.BeanUtil;
 import com.huayue.job.client.UserServiceClient;
 import com.huayue.job.entity.Company;
+import com.huayue.job.entity.Industry;
 import com.huayue.job.entity.Job;
 import com.huayue.job.repository.CompanyRepository;
 import com.huayue.job.repository.IndustryRepository;
 import com.huayue.job.repository.JobRepository;
+import com.huayue.job.repository.JobTypeRepository;
+import com.huayue.job.vo.CompanyVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,6 +37,8 @@ public class CompanyService extends BaseService<Company> {
     private JobRepository jobRepository;
     @Autowired
     private UserServiceClient userServiceClient;
+    @Autowired
+    private JobTypeRepository jobTypeRepository;
     @Override
     public BaseRepository<Company> getRepository() {
         return companyRepository;
@@ -92,5 +97,19 @@ public class CompanyService extends BaseService<Company> {
         }
         company.setChecked(Check.CHECKED.toString());
         return companyRepository.saveAndFlush(company);
+    }
+    public CompanyVO findOneById(String id) {
+        if (!companyRepository.existsById(id)) {
+            throw new NotFoundException(id);
+        }
+        Company company = companyRepository.findById(id).get();
+        List<Job> jobs = jobRepository.findByCompanyId(id);
+        for (Job job:
+             jobs) {
+            job.setJobType(jobTypeRepository.findById(job.getJobTypeId()).get());
+        }
+        Industry industry = industryRepository.findById(company.getIndustryId()).get();
+        CompanyVO companyVO = new CompanyVO(company,jobs,industry);
+        return companyVO;
     }
 }

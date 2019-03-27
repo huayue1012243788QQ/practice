@@ -1,17 +1,23 @@
 package com.huayue.job.service;
 
-import com.huayue.common.enums.check.Check;
 import com.huayue.common.enums.EducationRank;
+import com.huayue.common.enums.check.Check;
 import com.huayue.common.exception.CheckRepeatException;
+import com.huayue.common.exception.EnumErrorException;
 import com.huayue.common.exception.NotFoundException;
 import com.huayue.common.exception.UncheckException;
 import com.huayue.common.repository.BaseRepository;
 import com.huayue.common.service.BaseService;
 import com.huayue.common.util.BeanUtil;
+import com.huayue.job.entity.Company;
+import com.huayue.job.entity.Industry;
 import com.huayue.job.entity.Job;
+import com.huayue.job.entity.JobType;
 import com.huayue.job.repository.CompanyRepository;
+import com.huayue.job.repository.IndustryRepository;
 import com.huayue.job.repository.JobRepository;
 import com.huayue.job.repository.JobTypeRepository;
+import com.huayue.job.vo.JobVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -37,6 +43,8 @@ public class JobService extends BaseService<Job> {
     private CompanyRepository companyRepository;
     @Autowired
     private JobTypeRepository jobTypeRepository;
+    @Autowired
+    private IndustryRepository industryRepository;
     @Override
     public BaseRepository<Job> getRepository() {
         return jobRepository;
@@ -52,6 +60,9 @@ public class JobService extends BaseService<Job> {
         if (!jobTypeRepository.existsById(job.getJobTypeId())) {
             throw new NotFoundException(job.getJobTypeId());
         }
+        if (!EducationRank.check(job.getEducationRank())) {
+            throw new EnumErrorException();
+        }
         job.setChecked(Check.UNCHECKED.toString());
         return jobRepository.save(job);
     }
@@ -65,6 +76,9 @@ public class JobService extends BaseService<Job> {
         }
         if (!jobTypeRepository.existsById(job.getJobTypeId())) {
             throw new NotFoundException(job.getJobTypeId());
+        }
+        if (!EducationRank.check(job.getEducationRank())) {
+            throw new EnumErrorException();
         }
         Job job1 = jobRepository.findById(job.getId()).get();
         BeanUtil.copyNonNullProperties(job,job1);
@@ -113,6 +127,12 @@ public class JobService extends BaseService<Job> {
             predicates.add(criteriaBuilder.equal(root.get("checked").as(String.class),Check.CHECKED.toString()));
             return criteriaBuilder.and(predicates.toArray(new Predicate[predicates.size()]));
         }, pageable);
+        for (Job job:
+             jobs.getContent()) {
+            Company company = companyRepository.findById(job.getCompanyId()).get();
+            company.setIndustry(industryRepository.findById(company.getIndustryId()).get());
+            job.setCompany(company);
+        }
         return jobs;
     }
     public Job check(String id) {
@@ -125,5 +145,15 @@ public class JobService extends BaseService<Job> {
         }
         job.setChecked(Check.CHECKED.toString());
         return jobRepository.saveAndFlush(job);
+    }
+    public JobVO findOneById(String id) {
+        if (!jobRepository.existsById(id)) {
+            throw new NotFoundException(id);
+        }
+        Job job = jobRepository.findById(id).get();
+        Company company = companyRepository.findById(job.getCompanyId()).get();
+        Industry industry = industryRepository.findById(company.getIndustryId()).get();
+        JobType jobType = jobTypeRepository.findById(job.getJobTypeId()).get();
+        return new JobVO(job,company,jobType,industry);
     }
 }
