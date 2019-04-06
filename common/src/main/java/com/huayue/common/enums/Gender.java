@@ -6,6 +6,6 @@ package com.huayue.common.enums;
  * @date 2019/2/14.
  */
 public enum Gender {
-    MAIL,
-    FEMAIL
+    MALE,
+    FEMALE
 }

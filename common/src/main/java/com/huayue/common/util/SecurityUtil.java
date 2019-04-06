@@ -18,6 +18,7 @@ public class SecurityUtil {
      */
     public static String getCurrentUsername() {
         SecurityContext securityContext = SecurityContextHolder.getContext();
+        System.out.println("nihao");
         Authentication authentication = securityContext.getAuthentication();
         String username = null;
         if (authentication != null) {

@@ -9,5 +9,5 @@ public enum SkillType {
     PROFESSIONAL,
     LANGUAGE,
     HOBBY,
-    OTHER;
+    OTHER
 }

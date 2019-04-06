@@ -2,19 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c008349-f480-4259-883e-bd415ba19b6d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/vo/CompanyVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/vo/JobVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/vo/IndustryVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/config/AuditorConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/controller/ExperienceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/controller/SkillController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/huayue/common/entity/SuperEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/huayue/common/entity/SuperEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/huayue/authservice/config/OAuth2Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/huayue/authservice/config/OAuth2Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/huayue/authservice/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/huayue/authservice/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/EducationRank.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/EducationRank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/Gender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/SkillType.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/SkillType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/huayue/common/service/BaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/huayue/common/service/BaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/huayue/common/util/SecurityUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/huayue/common/util/SecurityUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/config/ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/config/ResourceServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/CompanyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/IndustryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/IndustryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/JobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/JobController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/entity/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/entity/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/entity/Job.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/service/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/service/CompanyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/JobTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/JobTypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/entity/Industry.java" beforeDir="false" afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/entity/Industry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/service/IndustryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/service/IndustryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/service/JobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/service/JobService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul/src/main/java/com/huayue/zuul/filter/MyFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul/src/main/java/com/huayue/zuul/filter/MyFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/service/JobTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/service/JobTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/client/UserServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/client/UserServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/controller/EducationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/controller/EducationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/controller/PersonInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/controller/PersonInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/controller/ResumeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/controller/ResumeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/entity/Education.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/entity/Education.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/entity/Experience.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/entity/Experience.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/entity/PersonInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/entity/PersonInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/entity/Resume.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/entity/Resume.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/entity/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/entity/Skill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/repository/EducationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/repository/EducationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/repository/ExperienceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/repository/ExperienceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/repository/PersonInfoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/repository/PersonInfoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/repository/ResumeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/repository/ResumeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/repository/SkillRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/repository/SkillRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/service/EducationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/service/EducationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/service/PersonInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/service/PersonInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/service/ResumeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/service/ResumeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/vo/ResumeVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/vo/ResumeVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/huayue/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/huayue/userservice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/huayue/userservice/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/huayue/userservice/entity/User.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -67,40 +94,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/CompanyController.java">
+        <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/controller/EducationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1672">
-              <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/JobController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1694">
-              <caret line="93" column="24" lean-forward="true" selection-start-line="93" selection-start-column="24" selection-end-line="93" selection-end-column="24" />
+            <state relative-caret-position="714">
+              <caret line="59" selection-start-line="59" selection-end-line="60" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/zuul/src/main/java/com/huayue/zuul/filter/MyFilter.java">
+        <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/controller/ResumeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+            <state relative-caret-position="422">
+              <caret line="106" column="67" selection-start-line="106" selection-start-column="67" selection-end-line="106" selection-end-column="67" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/config/ResourceServerConfig.java">
+        <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/service/ResumeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+            <state relative-caret-position="516">
+              <caret line="89" column="13" lean-forward="true" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -118,8 +133,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>enpdoints</find>
-      <find>AuthorizationServerEndpointsConfiguration</find>
       <find>jwtAccessTokenConverter</find>
       <find>authenticationManager</find>
       <find>sec</find>
@@ -144,14 +157,18 @@
       <find>patch</find>
       <find>feign</find>
       <find>CorsFilter</find>
-      <find>CorsFilter</find>
       <find>login</find>
       <find>/user/user</find>
       <find>/user</find>
+      <find>huayue</find>
+      <find>check</find>
+      <find>experienceService</find>
     </findStrings>
     <replaceStrings>
       <replace>FAILE</replace>
       <replace>FAILURE</replace>
+      <replace>contains</replace>
+      <replace>skillService</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -160,57 +177,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/apply-service/src/main/java/com/huayue/applyservice/entity/Apply.java" />
-        <option value="$PROJECT_DIR$/apply-service/src/main/java/com/huayue/applyservice/client/JobServiceClient.java" />
-        <option value="$PROJECT_DIR$/apply-service/src/main/java/com/huayue/applyservice/repository/ApplyRepository.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/huayue/common/exception/PasswordErrorException.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/huayue/common/exception/CheckRepeatException.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/huayue/common/exception/UncheckException.java" />
-        <option value="$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/IndustryController.java" />
-        <option value="$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/JobTypeController.java" />
-        <option value="$PROJECT_DIR$/apply-service/src/main/java/com/huayue/applyservice/service/ApplyService.java" />
-        <option value="$PROJECT_DIR$/项目模块简介.txt" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/huayue/common/util/EnumUtil.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/huayue/common/constant/MessageConst.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/CheckType.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/check/CheckResult.java" />
-        <option value="$PROJECT_DIR$/job/src/main/java/com/huayue/job/config/UserIDAuditorBean.java" />
-        <option value="$PROJECT_DIR$/common/pom.xml" />
-        <option value="$PROJECT_DIR$/job/src/main/java/com/huayue/job/config/AuditorConfig.java" />
-        <option value="$PROJECT_DIR$/zuul/src/main/java/com/huayue/zuul/SwaggerConfig.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/check/CheckResultEnum.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/check/CheckType.java" />
-        <option value="$PROJECT_DIR$/admin-service/src/main/java/com/huayue/adminservice/client/AuditorConfig.java" />
-        <option value="$PROJECT_DIR$/admin-service/src/main/java/com/huayue/adminservice/entity/CheckResult.java" />
-        <option value="$PROJECT_DIR$/admin-service/src/main/java/com/huayue/adminservice/client/JobServiceClient.java" />
-        <option value="$PROJECT_DIR$/admin-service/pom.xml" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/huayue/common/constant/ExceptionConst.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/huayue/common/exception/CheckErrorException.java" />
-        <option value="$PROJECT_DIR$/admin-service/src/main/java/com/huayue/adminservice/repository/CheckResultRepository.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/huayue/common/util/SecurityUtil.java" />
-        <option value="$PROJECT_DIR$/项目进度.txt" />
-        <option value="$PROJECT_DIR$/admin-service/src/main/java/com/huayue/adminservice/controller/CheckResultController.java" />
-        <option value="$PROJECT_DIR$/admin-service/src/main/java/com/huayue/adminservice/service/CheckResultService.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/huayue/common/entity/CheckEntity.java" />
-        <option value="$PROJECT_DIR$/zuul/src/main/java/com/huayue/zuul/filter/CorsWebFilter.java" />
-        <option value="$PROJECT_DIR$/zuul/src/main/java/com/huayue/zuul/config/CorsConfig.java" />
-        <option value="$PROJECT_DIR$/zuul/src/main/java/com/huayue/zuul/config/WebSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/zuul/src/main/java/com/huayue/zuul/filter/CorsConfig.java" />
-        <option value="$PROJECT_DIR$/zuul/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/user-service/src/main/java/com/huayue/userservice/controller/UserController.java" />
         <option value="$PROJECT_DIR$/user-service/src/main/java/com/huayue/userservice/config/ResourceServerConfig.java" />
         <option value="$PROJECT_DIR$/job/src/main/java/com/huayue/job/entity/Company.java" />
         <option value="$PROJECT_DIR$/job/src/main/java/com/huayue/job/entity/Job.java" />
-        <option value="$PROJECT_DIR$/job/src/main/java/com/huayue/job/service/JobService.java" />
-        <option value="$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/JobController.java" />
         <option value="$PROJECT_DIR$/job/src/main/java/com/huayue/job/vo/JobVO.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/EducationRank.java" />
         <option value="$PROJECT_DIR$/job/src/main/java/com/huayue/job/vo/CompanyVO.java" />
         <option value="$PROJECT_DIR$/job/src/main/java/com/huayue/job/service/CompanyService.java" />
         <option value="$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/CompanyController.java" />
         <option value="$PROJECT_DIR$/common/src/main/java/com/huayue/common/entity/SuperEntity.java" />
-        <option value="$PROJECT_DIR$/job/src/main/java/com/huayue/job/config/ResourceServerConfig.java" />
         <option value="$PROJECT_DIR$/zuul/src/main/java/com/huayue/zuul/filter/MyFilter.java" />
+        <option value="$PROJECT_DIR$/job/src/main/java/com/huayue/job/config/ResourceServerConfig.java" />
+        <option value="$PROJECT_DIR$/job/src/main/java/com/huayue/job/vo/IndustryVO.java" />
+        <option value="$PROJECT_DIR$/job/src/main/java/com/huayue/job/service/IndustryService.java" />
+        <option value="$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/IndustryController.java" />
+        <option value="$PROJECT_DIR$/job/src/main/java/com/huayue/job/service/JobTypeService.java" />
+        <option value="$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/JobTypeController.java" />
+        <option value="$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/JobController.java" />
+        <option value="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/repository/PersonInfoRepository.java" />
+        <option value="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/service/PersonInfoService.java" />
+        <option value="$PROJECT_DIR$/user-service/src/main/java/com/huayue/userservice/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/user-service/src/main/java/com/huayue/userservice/service/UserService.java" />
+        <option value="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/controller/PersonInfoController.java" />
+        <option value="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/client/UserServiceClient.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/Gender.java" />
+        <option value="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/entity/PersonInfo.java" />
+        <option value="$PROJECT_DIR$/auth-service/src/main/java/com/huayue/authservice/entity/User.java" />
+        <option value="$PROJECT_DIR$/user-service/src/main/java/com/huayue/userservice/entity/User.java" />
+        <option value="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/repository/ResumeRepository.java" />
+        <option value="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/entity/Skill.java" />
+        <option value="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/repository/SkillRepository.java" />
+        <option value="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/repository/EducationRepository.java" />
+        <option value="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/repository/ExperienceRepository.java" />
+        <option value="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/vo/ResumeVO.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/EducationRank.java" />
+        <option value="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/entity/Education.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/huayue/common/util/SecurityUtil.java" />
+        <option value="$PROJECT_DIR$/job/src/main/java/com/huayue/job/entity/Industry.java" />
+        <option value="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/config/AuditorConfig.java" />
+        <option value="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/service/EducationService.java" />
+        <option value="$PROJECT_DIR$/job/src/main/java/com/huayue/job/service/JobService.java" />
+        <option value="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/controller/EducationController.java" />
+        <option value="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/entity/Experience.java" />
+        <option value="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/service/ExperienceService.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/huayue/common/service/BaseService.java" />
+        <option value="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/controller/ExperienceController.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/ExperienceType.java" />
+        <option value="$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/SkillType.java" />
+        <option value="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/controller/SkillController.java" />
+        <option value="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/entity/Resume.java" />
+        <option value="$PROJECT_DIR$/auth-service/src/main/java/com/huayue/authservice/config/OAuth2Config.java" />
+        <option value="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/service/ResumeService.java" />
+        <option value="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/controller/ResumeController.java" />
       </list>
     </option>
   </component>
@@ -249,10 +266,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="658" />
-    <option name="y" value="22" />
-    <option name="width" value="974" />
-    <option name="height" value="1087" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -262,6 +279,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -273,6 +291,51 @@
             <path>
               <item name="practice" type="b2602c69:ProjectViewProjectNode" />
               <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="auth-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="auth-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="auth-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="auth-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="auth-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="authservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="auth-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="authservice" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
               <item name="job" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -304,6 +367,26 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="job" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="job" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="job" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="job" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="job" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="practice" type="b2602c69:ProjectViewProjectNode" />
@@ -318,25 +401,43 @@
             <path>
               <item name="practice" type="b2602c69:ProjectViewProjectNode" />
               <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="job" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="job" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="practice" type="b2602c69:ProjectViewProjectNode" />
               <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="job" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="resume" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="resume" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="practice" type="b2602c69:ProjectViewProjectNode" />
               <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="resume" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="practice" type="b2602c69:ProjectViewProjectNode" />
               <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="resume" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -344,17 +445,71 @@
             <path>
               <item name="practice" type="b2602c69:ProjectViewProjectNode" />
               <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="resume" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="zuul" type="462c0819:PsiDirectoryNode" />
+              <item name="resume" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="resume" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="resume" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="userservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="user-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="userservice" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -381,12 +536,9 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.huayue.applyservice.service" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.huayue.applyservice" />
       <recent name="com.huayue.userservice" />
@@ -394,19 +546,22 @@
       <recent name="com.huayue.job" />
       <recent name="com.huayue.configclient" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.huayue.adminservice.client" />
-      <recent name="com.huayue.zuul.config" />
-      <recent name="com.huayue.resume.client" />
-      <recent name="com.huayue.resume.config" />
-      <recent name="com.huayue.userservice.service" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\project\practice\apply-service\src\main\java\com\huayue\applyservice\config" />
       <recent name="D:\project\practice\admin-service\src\main\java\com\huayue\adminservice\config" />
       <recent name="D:\project\practice" />
       <recent name="D:\project\practice\auth-service\src\main\java\com\huayue\authservice\entity" />
       <recent name="D:\project\practice\auth-service\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.huayue.resume.config" />
+      <recent name="com.huayue.adminservice.client" />
+      <recent name="com.huayue.zuul.config" />
+      <recent name="com.huayue.resume.client" />
+      <recent name="com.huayue.userservice.service" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.huayue.applyservice.service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -427,7 +582,7 @@
     </option>
     <option name="contentProportion" value="0.2012987" />
   </component>
-  <component name="RunManager" selected="Spring Boot.JobApplication">
+  <component name="RunManager" selected="Spring Boot.ResumeApplication">
     <configuration name="AdminServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="admin-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.huayue.adminservice.AdminServiceApplication" />
@@ -540,7 +695,9 @@
       <workItem from="1552976556561" duration="793000" />
       <workItem from="1552977494493" duration="40558000" />
       <workItem from="1553069876558" duration="39937000" />
-      <workItem from="1553567392606" duration="12584000" />
+      <workItem from="1553567392606" duration="50988000" />
+      <workItem from="1554357464731" duration="2924000" />
+      <workItem from="1554533140249" duration="19444000" />
     </task>
     <task id="LOCAL-00001" summary="初次提交">
       <created>1553153922535</created>
@@ -563,11 +720,18 @@
       <option name="project" value="LOCAL" />
       <updated>1553567695912</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="某些api在无token状态下的放行">
+      <created>1553670794460</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1553670794460</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="494219000" />
+    <option name="totallyTimeSpent" value="554991000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -589,7 +753,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.20469083" />
+      <window_info content_ui="combo" id="Project" order="7" weight="0.20682302" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32917964" />
@@ -601,11 +765,11 @@
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49946696" weight="0.32848233" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5026652" side_tool="true" weight="0.30769232" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49840087" weight="0.18607068" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49840087" weight="0.18572928" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32952183" />
       <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32917964" />
       <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.49733475" visible="true" weight="0.30769232" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.49733475" visible="true" weight="0.3035343" />
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.32917964" />
       <window_info anchor="bottom" id="Statistic" order="17" weight="0.32917964" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -627,7 +791,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.20469083" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.20682302" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32917964" />
@@ -638,12 +802,12 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49946696" weight="0.32848233" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5021322" side_tool="true" weight="0.22141372" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49840087" weight="0.18607068" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5026652" side_tool="true" weight="0.30769232" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49840087" weight="0.18572928" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32952183" />
       <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32917964" />
       <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.4978678" visible="true" weight="0.30769232" />
+      <window_info anchor="bottom" id="Run Dashboard" order="15" sideWeight="0.49733475" visible="true" weight="0.3035343" />
       <window_info anchor="bottom" id="Database Console" order="16" weight="0.32917964" />
       <window_info anchor="bottom" id="Statistic" order="17" weight="0.32917964" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -665,237 +829,112 @@
     <MESSAGE value="初次提交" />
     <MESSAGE value="新增管理员的审核功能" />
     <MESSAGE value="跨域问题解决" />
-    <option name="LAST_COMMIT_MESSAGE" value="跨域问题解决" />
+    <MESSAGE value="某些api在无token状态下的放行" />
+    <option name="LAST_COMMIT_MESSAGE" value="某些api在无token状态下的放行" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/项目进度.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/security/spring-security-core/5.1.4.RELEASE/spring-security-core-5.1.4.RELEASE-sources.jar!/org/springframework/security/access/expression/SecurityExpressionRoot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="69" column="25" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
-          <folding>
-            <element signature="e#2507#2508#0" expanded="true" />
-            <element signature="e#2559#2560#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-service/src/main/java/com/huayue/adminservice/controller/CheckResultController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2295#2296#0" expanded="true" />
-            <element signature="e#2333#2334#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-service/src/main/java/com/huayue/adminservice/service/CheckResultService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="49" column="13" lean-forward="true" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/com/huayue/zuul/filter/CorsWebFilter.java" />
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.16/tomcat-embed-core-9.0.16.jar!/org/apache/catalina/filters/CorsFilter.class">
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/huayue/userservice/repository/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret line="251" lean-forward="true" selection-start-line="251" selection-end-line="251" />
+          <caret column="42" lean-forward="true" selection-start-column="42" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.16/tomcat-embed-core-9.0.16-sources.jar!/org/apache/catalina/filters/CorsFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="80" column="37" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.16/tomcat-embed-core-9.0.16-sources.jar!/javax/servlet/GenericFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-343">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/com/huayue/zuul/config/CorsConfig.java" />
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/cloud/spring-cloud-netflix-zuul/2.1.1.RELEASE/spring-cloud-netflix-zuul-2.1.1.RELEASE.jar!/org/springframework/cloud/netflix/zuul/filters/ZuulProperties.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="72" column="16" selection-start-line="72" selection-start-column="16" selection-end-line="72" selection-end-column="16" />
-          <folding>
-            <element signature="e#3257#3258#0" expanded="true" />
-            <element signature="e#3315#3316#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/cloud/spring-cloud-netflix-zuul/2.1.1.RELEASE/spring-cloud-netflix-zuul-2.1.1.RELEASE-sources.jar!/org/springframework/cloud/netflix/zuul/filters/ZuulProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1540">
-          <caret line="200" column="16" selection-start-line="200" selection-start-column="16" selection-end-line="200" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/5.1.5.RELEASE/spring-web-5.1.5.RELEASE.jar!/org/springframework/web/filter/CorsFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/JobApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/huayue/userservice/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1034">
-          <caret line="36" column="37" lean-forward="true" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auth-service/src/main/java/com/huayue/authservice/AuthServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auth-service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="70" lean-forward="true" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="584">
-          <caret line="36" column="43" lean-forward="true" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auth-service/src/main/java/com/huayue/authservice/config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/com/huayue/zuul/filter/CorsConfig.java">
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/client/UserServiceClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
-          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/huayue/userservice/config/GlobalMethodSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/huayue/userservice/config/JwtConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auth-service/src/main/java/com/huayue/authservice/config/OAuth2Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/huayue/userservice/config/ResourceServerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/huayue/userservice/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="66" column="62" selection-start-line="66" selection-start-column="62" selection-end-line="66" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/com/huayue/zuul/config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/IndustryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/SkillType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/Scale.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/ResumeType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <caret line="21" column="20" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/Gender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        <state relative-caret-position="198">
+          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/ExperienceType.java">
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/service/PersonInfoService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        <state relative-caret-position="205">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/check/Check.java">
+    <entry file="file://$PROJECT_DIR$/auth-service/src/main/java/com/huayue/authservice/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        <state relative-caret-position="440">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/entity/PersonInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/huayue/userservice/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/controller/PersonInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/repository/ResumeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/repository/SkillRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/repository/EducationRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/repository/ExperienceRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/vo/ResumeVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/data/spring-data-commons/2.1.4.RELEASE/spring-data-commons-2.1.4.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/data/spring-data-commons/2.1.4.RELEASE/spring-data-commons-2.1.4.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -906,138 +945,264 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/check/CheckType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/entity/Industry.java">
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/constant/GradeRank.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="34" />
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/entity/JobType.java">
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/ResumeApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        <state relative-caret-position="154">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/EducationRank.java">
+    <entry file="file://$PROJECT_DIR$/resume/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        <state relative-caret-position="462">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="22" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/vo/JobVO.java">
+    <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/SwaggerConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/huayue/common/service/BaseService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/service/JobTypeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/service/JobService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="149" column="37" selection-start-line="149" selection-start-column="27" selection-end-line="149" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/entity/Job.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="35" column="28" lean-forward="true" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/vo/CompanyVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="74" selection-start-line="24" selection-start-column="74" selection-end-line="24" selection-end-column="74" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/service/CompanyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="112" column="25" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/entity/Company.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/huayue/common/entity/CheckEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/huayue/common/entity/SuperEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="34" column="19" lean-forward="true" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/CompanyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1672">
-          <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/JobController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1694">
-          <caret line="93" column="24" lean-forward="true" selection-start-line="93" selection-start-column="24" selection-end-line="93" selection-end-column="24" />
+        <state relative-caret-position="213">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/config/ResourceServerConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+        <state relative-caret-position="45">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zuul/src/main/java/com/huayue/zuul/filter/MyFilter.java">
+    <entry file="file://$PROJECT_DIR$/auth-service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/config/AuditorConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="54" column="9" lean-forward="true" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+        <state relative-caret-position="242">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/huayue/common/util/SecurityUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/config/ResourceServerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user-service/src/main/java/com/huayue/userservice/config/ResourceServerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/entity/Industry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/config/AuditorConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/JobController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="78" selection-start-line="78" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/service/JobService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="91" column="33" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
+          <folding>
+            <element signature="e#1758#1759#0" expanded="true" />
+            <element signature="e#1794#1795#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/huayue/common/entity/SuperEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="32" selection-start-line="32" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/service/ExperienceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/huayue/common/service/BaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding>
+            <element signature="e#714#715#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#804#805#0" expanded="true" />
+            <element signature="e#848#849#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/entity/Experience.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="22" column="24" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/ExperienceType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/controller/ExperienceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/controller/SkillController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#659#660#0" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#864#865#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/entity/Skill.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/SkillType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/entity/Education.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/entity/Resume.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/EducationRank.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Enum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="75" column="24" selection-start-line="75" selection-start-column="24" selection-end-line="75" selection-end-column="24" />
+          <folding>
+            <element signature="e#2036#2037#0" expanded="true" />
+            <element signature="e#2063#2064#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/service/EducationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/ResumeType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auth-service/src/main/java/com/huayue/authservice/config/OAuth2Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="37" column="53" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/service/ResumeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="89" column="13" lean-forward="true" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/controller/EducationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="59" selection-start-line="59" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/controller/ResumeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="106" column="67" selection-start-line="106" selection-start-column="67" selection-end-line="106" selection-end-column="67" />
         </state>
       </provider>
     </entry>

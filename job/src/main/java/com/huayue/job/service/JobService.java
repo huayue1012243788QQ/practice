@@ -60,7 +60,7 @@ public class JobService extends BaseService<Job> {
         if (!jobTypeRepository.existsById(job.getJobTypeId())) {
             throw new NotFoundException(job.getJobTypeId());
         }
-        if (!EducationRank.check(job.getEducationRank())) {
+        if (!EducationRank.contains(job.getEducationRank())) {
             throw new EnumErrorException();
         }
         job.setChecked(Check.UNCHECKED.toString());
@@ -77,7 +77,7 @@ public class JobService extends BaseService<Job> {
         if (!jobTypeRepository.existsById(job.getJobTypeId())) {
             throw new NotFoundException(job.getJobTypeId());
         }
-        if (!EducationRank.check(job.getEducationRank())) {
+        if (!EducationRank.contains(job.getEducationRank())) {
             throw new EnumErrorException();
         }
         Job job1 = jobRepository.findById(job.getId()).get();
@@ -89,7 +89,7 @@ public class JobService extends BaseService<Job> {
         if (!jobRepository.existsById(id)) {
             throw new NotFoundException(id);
         }
-        jobRepository.delete(jobRepository.findById(id).get());
+        jobRepository.deleteById(id);
     }
     public Page<Job> queryForList(String title,
                                   Integer minSalary,
@@ -118,11 +118,11 @@ public class JobService extends BaseService<Job> {
             if (workTime != null) {
                 predicates.add(criteriaBuilder.equal(root.get("workTime").as(int.class),workTime));
             }
-            if (!StringUtils.isEmpty(educationRank) && EducationRank.check(educationRank)) {
+            if (!StringUtils.isEmpty(educationRank) && EducationRank.contains(educationRank)) {
                 predicates.add(criteriaBuilder.equal(root.get("educationRank").as(String.class),educationRank));
             }
             if (!StringUtils.isEmpty(city)) {
-                predicates.add(criteriaBuilder.equal(root.get("city").as(String.class),city));
+                predicates.add(criteriaBuilder.like(root.get("city").as(String.class),city + "%"));
             }
             predicates.add(criteriaBuilder.equal(root.get("checked").as(String.class),Check.CHECKED.toString()));
             return criteriaBuilder.and(predicates.toArray(new Predicate[predicates.size()]));
@@ -130,7 +130,9 @@ public class JobService extends BaseService<Job> {
         for (Job job:
              jobs.getContent()) {
             Company company = companyRepository.findById(job.getCompanyId()).get();
-            company.setIndustry(industryRepository.findById(company.getIndustryId()).get());
+            Industry industry = industryRepository.findById(company.getIndustryId()).get();
+            industry.setIndustry(industryRepository.findById(industry.getParentId()).get());
+            company.setIndustry(industry);
             job.setCompany(company);
         }
         return jobs;

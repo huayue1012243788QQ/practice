@@ -6,11 +6,14 @@ import com.huayue.common.exception.NotFoundException;
 import com.huayue.common.global.Result;
 import com.huayue.resume.entity.Resume;
 import com.huayue.resume.service.ResumeService;
+import com.huayue.resume.vo.ResumeVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * @author huayue.
@@ -18,7 +21,6 @@ import org.springframework.web.bind.annotation.*;
  * @date 2019/2/18.
  */
 @RestController
-@RequestMapping("resume")
 @Slf4j
 public class ResumeController {
     @Autowired
@@ -65,5 +67,43 @@ public class ResumeController {
             return Result.failure(e.getRetCd(),e.getMsgDes());
         }
         return Result.success(resume);
+    }
+    @GetMapping("/getByPersonInfoId")
+    public Object getByPersonInfoId(@RequestParam String personInfoId) {
+        if (StringUtils.isEmpty(personInfoId)) {
+            return Result.failure(MessageConst.ID_NULL_MESSAGE);
+        }
+        List<Resume> resumes;
+        try {
+            resumes = resumeService.getByPersonInfoId(personInfoId);
+        } catch (NotFoundException e) {
+            return Result.failure(e.getRetCd(),e.getMsgDes());
+        }
+        return Result.success(resumes);
+    }
+    @GetMapping("/getResumeVOByResumeId")
+    public Object getResumeVOByResumeId(@RequestParam String resumeId) {
+        if (StringUtils.isEmpty(resumeId)) {
+            return Result.failure(MessageConst.ID_NULL_MESSAGE);
+        }
+        ResumeVO resumeVO;
+        try {
+            resumeVO = resumeService.getResumeVOByResumeId(resumeId);
+        } catch (NotFoundException e) {
+            return Result.failure(e.getRetCd(),e.getMsgDes());
+        }
+        return Result.success(resumeVO);
+    }
+    @DeleteMapping("/{id}")
+    public Object deleteOne(@PathVariable String id) {
+        if (StringUtils.isEmpty(id)) {
+            return Result.failure(MessageConst.ID_NULL_MESSAGE);
+        }
+        try {
+            resumeService.delete(id);
+        } catch (NotFoundException e) {
+            return Result.failure(e.getRetCd(),e.getMsgDes());
+        }
+        return Result.success(MessageConst.DELETE_SUCCESS_MESSAGE);
     }
 }

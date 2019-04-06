@@ -27,4 +27,10 @@ public abstract class BaseService<T> {
         }
         return getRepository().findById(id).get();
     }
+    public T update(T t) {
+        return getRepository().saveAndFlush(t);
+    }
+    public void delete(String id) {
+        getRepository().deleteById(id);
+    }
 }

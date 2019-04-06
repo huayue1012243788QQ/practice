@@ -28,10 +28,6 @@ public class User extends SuperEntity implements UserDetails, Serializable {
     private String password;
     @Column(name="salt")
     private String salt;
-    @Column(name="email")
-    private String email;
-    @Column(name="mobile")
-    private String mobile;
     @Column(name="status")
     private boolean status;
     @Column(name="del_flag")

@@ -29,9 +29,7 @@ public class IndustryController {
         Industry industry1;
         try {
             industry1 = industryService.save(industry);
-        } catch (RepeatException e) {
-            return Result.failure(e.getRetCd(), e.getMsgDes());
-        } catch (NotFoundException e) {
+        }  catch (NotFoundException e) {
             return Result.failure(e.getRetCd(),e.getMsgDes());
         }
         return Result.success(industry1);
@@ -51,7 +49,7 @@ public class IndustryController {
     }
     @GetMapping("/")
     public Object getAll() {
-        return Result.success(industryService.queryForAll());
+        return Result.success(industryService.getIndustryVOAll());
     }
 
     @DeleteMapping("/{id}")

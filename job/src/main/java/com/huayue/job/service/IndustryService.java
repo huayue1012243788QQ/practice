@@ -9,9 +9,11 @@ import com.huayue.job.entity.Industry;
 import com.huayue.job.entity.JobType;
 import com.huayue.job.repository.IndustryRepository;
 import com.huayue.job.repository.JobTypeRepository;
+import com.huayue.job.vo.IndustryVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -32,9 +34,6 @@ public class IndustryService extends BaseService<Industry> {
     }
 
     public Industry save(Industry industry) {
-        if (industryRepository.existsByName(industry.getName())) {
-            throw new RepeatException();
-        }
         if (industry.getParentId() != null) {
             if (!industryRepository.existsById(industry.getParentId())) {
                 throw new NotFoundException(industry.getParentId());
@@ -81,5 +80,24 @@ public class IndustryService extends BaseService<Industry> {
             }
         }
         industryRepository.delete(industryRepository.findById(id).get());
+    }
+    public List<IndustryVO> getIndustryVOAll() {
+        List<Industry> industries = industryRepository.findAll();
+        List<IndustryVO> industryVOS = new ArrayList<>();
+        for (Industry industry:
+             industries) {
+            List<Industry> industryChildren = industryRepository.findByParentId(industry.getId());
+            System.out.println(industry.getName());
+            System.out.println(industryChildren.size());
+            if (industryChildren.size() != 0) {
+                for (Industry industryChild:
+                     industryChildren) {
+                    industryChild.setJobTypes(jobTypeRepository.findByIndustryId(industryChild.getId()));
+                }
+                IndustryVO industryVO = new IndustryVO(industry,industryChildren);
+                industryVOS.add(industryVO);
+            }
+        }
+        return industryVOS;
     }
 }

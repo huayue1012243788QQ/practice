@@ -16,4 +16,11 @@ public class ResumeVO {
     private List<Skill> skills;
     private List<Education> educations;
     private List<Experience> experiences;
+    public ResumeVO(PersonInfo personInfo, Resume resume, List<Skill> skills, List<Education> educations, List<Experience> experiences) {
+        this.personInfo = personInfo;
+        this.resume = resume;
+        this.skills = skills;
+        this.educations = educations;
+        this.experiences = experiences;
+    }
 }

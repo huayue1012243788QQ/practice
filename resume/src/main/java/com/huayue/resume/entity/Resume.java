@@ -19,5 +19,6 @@ public class Resume extends SuperEntity {
     private String selfEvaluation;
     private String worksLink;
     private String resumeType;
-    private String attachment;
+    private String attachment;    // 附件
+    private String resumeName;
 }

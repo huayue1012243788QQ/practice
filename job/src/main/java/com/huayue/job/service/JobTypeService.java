@@ -30,9 +30,6 @@ public class JobTypeService extends BaseService<JobType> {
     }
 
     public JobType save(JobType jobType) {
-        if (jobTypeRepository.existsByName(jobType.getName())) {
-            throw new RepeatException();
-        }
         if (!industryRepository.existsById(jobType.getIndustryId())) {
             throw new NotFoundException(jobType.getIndustryId());
         }

@@ -53,4 +53,17 @@ public class PersonInfoController {
         }
         return Result.success(personInfo1);
     }
+    @GetMapping("/getByUserId")
+    public Object getByUserId(@RequestParam String userId) {
+        if (StringUtils.isEmpty(userId)) {
+            return Result.failure(MessageConst.ID_NULL_MESSAGE);
+        }
+        PersonInfo personInfo;
+        try {
+            personInfo = personInfoService.getByUserId(userId);
+        } catch (NotFoundException e) {
+            return Result.failure(e.getRetCd(),e.getMsgDes());
+        }
+        return Result.success(personInfo);
+    }
 }

@@ -1,5 +1,6 @@
 package com.huayue.resume.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.huayue.common.entity.SuperEntity;
 import com.huayue.common.enums.Gender;
 import lombok.Data;
@@ -20,8 +21,11 @@ public class PersonInfo extends SuperEntity {
     private String name;
     @Enumerated(EnumType.STRING)
     private Gender gender;
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date birthday;
     private String country;
     private String city;
     private String userId;
+    private String mobile;
+    private String email;
 }

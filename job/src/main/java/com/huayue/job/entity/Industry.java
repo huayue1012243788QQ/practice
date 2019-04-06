@@ -18,4 +18,6 @@ public class Industry extends SuperEntity {
     private String parentId;
     @Transient
     private List<JobType> jobTypes;
+    @Transient
+    private Industry industry;
 }

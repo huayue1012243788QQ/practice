@@ -18,6 +18,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface UserServiceClient {
     @RequestMapping(value = "/user/{id}",method = RequestMethod.GET)
     Result getOne(@PathVariable("id") String id);
-    @GetMapping(value = "/user/")
+    @GetMapping(value = "/user")
     Object getAll();
 }

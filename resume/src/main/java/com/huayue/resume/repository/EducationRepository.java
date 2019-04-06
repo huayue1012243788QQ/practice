@@ -4,6 +4,8 @@ import com.huayue.common.repository.BaseRepository;
 import com.huayue.resume.entity.Education;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * @author huayue.
  * @email huayuechn@gmail.com
@@ -11,4 +13,5 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface EducationRepository extends BaseRepository<Education> {
+    List<Education> findByResumeId(String resumeId);
 }

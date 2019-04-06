@@ -14,6 +14,7 @@ import com.huayue.userservice.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -114,9 +115,17 @@ public class UserController {
     public Principal user(Principal user){
         return user;
     }
-//    @GetMapping("/foo")
-//    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
-//    public Object getFoo() {
-//        return Result.success();
-//    }
+    @GetMapping("/getByUsername")
+    public Object getByUsername(@RequestParam String username) {
+        if (StringUtils.isEmpty(username)) {
+            return Result.failure(MessageConst.VALUE_NULL_MESSAGE);
+        }
+        User user;
+        try {
+            user = (User) userService.loadUserByUsername(username);
+        } catch (UsernameNotFoundException e) {
+            return Result.failure(e.getMessage());
+        }
+        return Result.success(user);
+    }
 }

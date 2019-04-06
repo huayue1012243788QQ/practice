@@ -106,9 +106,6 @@ public class JobController {
             size =1;
         }
         Page<Job> jobs = jobService.queryForList(title,minSalary,maxSalary,workDay,workTime,educationRank,city,page,size);
-        if (jobs.getTotalElements() == 0) {
-            return Result.success(MessageConst.NOTHING_FOUND_MESSAGE);
-        }
         return Result.success(jobs);
     }
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN','ROLE_REVIEWER')")

@@ -12,6 +12,8 @@ import com.huayue.resume.repository.PersonInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author huayue.
  * @email huayuechn@gmail.com
@@ -44,5 +46,19 @@ public class PersonInfoService extends BaseService<PersonInfo> {
         PersonInfo personInfo1 = personInfoRepository.findById(personInfo.getId()).get();
         BeanUtil.copyNonNullProperties(personInfo,personInfo1);
         return personInfoRepository.saveAndFlush(personInfo1);
+    }
+    public PersonInfo getByUserId(String id) {
+        if (userServiceClient.getOne(id).getCode() != 200) {
+            throw new NotFoundException(id);
+        }
+        if (!personInfoRepository.existsByUserId(id)) {
+            throw new NotFoundException("user:" + id + "未完善个人信息");
+        }
+        List<PersonInfo> personInfos = personInfoRepository.findByUserId(id);
+        if (personInfos.size() == 0) {
+            return null;
+        } else {
+            return personInfos.get(0);
+        }
     }
 }

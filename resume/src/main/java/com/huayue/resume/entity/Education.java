@@ -7,7 +7,6 @@ import lombok.Data;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import java.util.Date;
 
 /**
  * @author huayue.
@@ -21,8 +20,8 @@ public class Education extends SuperEntity {
     private String gradeRank;
     private String courses;
     private String school;
-    private Date start;
-    private Date end;
+    private int start;
+    private int end;
     @Enumerated(EnumType.STRING)
     private EducationRank educationRank;
     private String awards;

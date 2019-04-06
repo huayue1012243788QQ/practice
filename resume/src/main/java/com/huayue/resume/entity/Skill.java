@@ -19,4 +19,5 @@ public class Skill extends SuperEntity {
     @Enumerated(EnumType.STRING)
     private SkillType skillType;
     private String description;
+    private String resumeId;
 }

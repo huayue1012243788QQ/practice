@@ -35,7 +35,7 @@ public class OAuth2Config extends AuthorizationServerConfigurerAdapter {
                 .secret("{noop}123456")
                 .scopes("service")
                 .authorizedGrantTypes("refresh_token", "password")
-                .accessTokenValiditySeconds(12*300);
+                .accessTokenValiditySeconds(12*300*10);
     }
 
     @Autowired

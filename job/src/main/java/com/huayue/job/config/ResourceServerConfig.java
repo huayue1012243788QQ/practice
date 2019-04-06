@@ -27,7 +27,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                         "/api-doc",
                         "/v2/api-docs",
                         "/job/{id}",
-                        "/{id}").permitAll()
+                        "/{id}",
+                        "/industry/").permitAll()
                 .anyRequest().authenticated();
     }
 

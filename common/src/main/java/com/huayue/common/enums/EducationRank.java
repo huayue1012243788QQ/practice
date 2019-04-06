@@ -13,7 +13,7 @@ public enum EducationRank {
     MASTER,
     DOCTOR,
     WHATEVER;
-    public static boolean check(String rank) {
+    public static boolean contains(String rank) {
         for (EducationRank educationRank:
              EducationRank.values()) {
             if (rank.equals(educationRank.toString())) {

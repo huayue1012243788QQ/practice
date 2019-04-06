@@ -36,8 +36,6 @@ public class JobTypeController {
             jobType1 = jobTypeService.save(jobType);
         } catch (NotFoundException e) {
             return Result.failure(e.getRetCd(), e.getMsgDes());
-        } catch (RepeatException e) {
-            return Result.failure(e.getRetCd(), e.getMsgDes());
         }
         return Result.success(jobType1);
     }
