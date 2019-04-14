@@ -36,10 +36,10 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/")
-    public Object addOne(@RequestBody User user) {
+    public Object addOne(@RequestBody User user,@RequestParam String userType) {
         User user1;
         try {
-            user1 = userService.save(user);
+            user1 = userService.save(user,userType);
         } catch (RepeatException e) {
             return Result.failure(e.getRetCd(),e.getMsgDes());
         }

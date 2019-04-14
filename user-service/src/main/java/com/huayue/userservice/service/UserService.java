@@ -22,6 +22,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -47,11 +48,20 @@ public class UserService extends BaseService<User> implements UserDetailsService
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         return userRepository.findByUsername(s);
     }
-    public User save(User user) {
+    public User save(User user,String userType) {
         if (userRepository.existsByUsername(user.getUsername())) {
             throw new RepeatException();
         }
         user.setPassword(BPwdEncoderUtil.BCryptPassword(user.getPassword()));
+        if (userType.equals("student")) {
+            List<Role> roles = new ArrayList<>();
+            roles.add(roleRepository.findByName("ROLE_STU"));
+            user.setAuthorities(roles);
+        } else if (userType.equals("company")) {
+            List<Role> roles = new ArrayList<>();
+            roles.add(roleRepository.findByName("ROLE_COMPANY"));
+            user.setAuthorities(roles);
+        }
         return userRepository.save(user);
     }
     public UserLoginDTO login(LoginDTO loginDTO) {

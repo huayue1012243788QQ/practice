@@ -15,10 +15,8 @@ import java.util.List;
 public class IndustryVO {
     private Industry industry;
     List<Industry> industries;
-
     public IndustryVO() {
     }
-
     public IndustryVO(Industry industry, List<Industry> industries) {
         this.industry = industry;
         this.industries = industries;

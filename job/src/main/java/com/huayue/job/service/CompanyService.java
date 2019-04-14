@@ -20,6 +20,7 @@ import com.huayue.job.vo.CompanyVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -111,5 +112,31 @@ public class CompanyService extends BaseService<Company> {
         Industry industry = industryRepository.findById(company.getIndustryId()).get();
         CompanyVO companyVO = new CompanyVO(company,jobs,industry);
         return companyVO;
+    }
+    public CompanyVO findByUserId(String id) {
+        if (!companyRepository.existsByUserId(id)) {
+            throw new NotFoundException(id);
+        }
+        Company company = companyRepository.findByUserId(id).get(0);
+        List<Job> jobs = jobRepository.findByCompanyId(company.getId());
+        for (Job job:
+                jobs) {
+            job.setJobType(jobTypeRepository.findById(job.getJobTypeId()).get());
+        }
+        Industry industry = industryRepository.findById(company.getIndustryId()).get();
+        industry.setIndustry(industryRepository.findById(industry.getParentId()).get());
+        CompanyVO companyVO = new CompanyVO(company,jobs,industry);
+        return companyVO;
+    }
+    public List<CompanyVO> getUncheckList() {
+        List<Company> companies = companyRepository.findByChecked(Check.UNCHECKED.toString());
+        List<CompanyVO> companyVOS = new ArrayList<>();
+        for (Company company:
+             companies) {
+            Industry industry = industryRepository.findById(company.getIndustryId()).get();
+            CompanyVO companyVO = new CompanyVO(company,null,industry);
+            companyVOS.add(companyVO);
+        }
+        return companyVOS;
     }
 }

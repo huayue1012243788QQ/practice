@@ -124,4 +124,8 @@ public class JobController {
         }
         return Result.success(job);
     }
+    @GetMapping("/getUncheckJobList")
+    public Object getUncheckList() {
+        return Result.success(jobService.getUncheckList());
+    }
 }

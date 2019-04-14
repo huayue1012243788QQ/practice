@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * @author huayue.
  * @email huayuechn@gmail.com
@@ -41,5 +43,9 @@ public class ApplyController {
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     public Object getAll() {
         return applyService.queryForAll();
+    }
+    @PostMapping("/getByCompanyId")
+    public Object getByCompanyId(@RequestBody List<String> jobIds) {
+        return Result.success(applyService.getByJobList(jobIds));
     }
 }

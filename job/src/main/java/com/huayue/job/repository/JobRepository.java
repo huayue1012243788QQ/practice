@@ -14,4 +14,5 @@ import java.util.List;
 @Repository
 public interface JobRepository extends BaseRepository<Job> {
     List<Job> findByCompanyId(String id);
+    List<Job> findByChecked(String check);
 }

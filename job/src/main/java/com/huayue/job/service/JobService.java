@@ -158,4 +158,17 @@ public class JobService extends BaseService<Job> {
         JobType jobType = jobTypeRepository.findById(job.getJobTypeId()).get();
         return new JobVO(job,company,jobType,industry);
     }
+    public List<JobVO> getUncheckList() {
+        List<Job> jobs = jobRepository.findByChecked(Check.UNCHECKED.toString());
+        List<JobVO> jobVOS = new ArrayList<>();
+        for (Job job:
+             jobs) {
+            Company company = companyRepository.findById(job.getCompanyId()).get();
+            Industry industry = industryRepository.findById(company.getIndustryId()).get();
+            JobType jobType = jobTypeRepository.findById(job.getJobTypeId()).get();
+            JobVO jobVO = new JobVO(job,company,jobType,industry);
+            jobVOS.add(jobVO);
+        }
+        return jobVOS;
+    }
 }

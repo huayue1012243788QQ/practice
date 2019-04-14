@@ -19,6 +19,7 @@ public class Company extends CheckEntity {
     private String address;
     private String scale;
     private String industryId;
+    private String city;
     @Transient
     private List<Job> jobs;
     private String userId;

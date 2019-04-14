@@ -105,4 +105,21 @@ public class CompanyController {
         }
         return Result.success(company);
     }
+    @GetMapping("/getByUserId")
+    public Object getByUserId(@RequestParam String userId) {
+        if (StringUtils.isEmpty(userId)) {
+            return Result.failure(MessageConst.ID_NULL_MESSAGE);
+        }
+        CompanyVO companyVO;
+        try {
+            companyVO = companyService.findByUserId(userId);
+        } catch (NotFoundException e) {
+            return Result.failure(e.getRetCd(),e.getMsgDes());
+        }
+        return Result.success(companyVO);
+    }
+    @GetMapping("/getUncheckCompanyList")
+    public Object getUncheckCompanyList() {
+        return Result.success(companyService.getUncheckList());
+    }
 }

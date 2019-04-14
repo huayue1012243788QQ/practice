@@ -22,6 +22,13 @@ public class MyFilter extends ZuulFilter {
     private static String ROLE_URI = "/api/user/role/user-role";
     private static String JOB_LIST_URI = "/api/company/job/";
     private static String COMPANY_URI = "/api/company/";
+    private static String[] passURI = {
+            "/api/user/user/login",
+            "/api/user/user/",
+            "/api/user/role/user-role",
+            "/api/company/job/",
+            "/api/company/"
+    };
     @Override
     public String filterType() {
         return "pre";

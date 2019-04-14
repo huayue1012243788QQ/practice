@@ -21,7 +21,7 @@ public class PersonInfo extends SuperEntity {
     private String name;
     @Enumerated(EnumType.STRING)
     private Gender gender;
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
+    @JsonFormat(pattern="yyyy-MM-dd",timezone = "GMT+8")
     private Date birthday;
     private String country;
     private String city;

@@ -1,5 +1,6 @@
 package com.huayue.applyservice.service;
 
+import com.alibaba.fastjson.JSONObject;
 import com.huayue.applyservice.client.JobServiceClient;
 import com.huayue.applyservice.client.ResumeServiceClient;
 import com.huayue.applyservice.entity.Apply;
@@ -11,6 +12,10 @@ import com.huayue.common.repository.BaseRepository;
 import com.huayue.common.service.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author huayue.
  * @email huayuechn@gmail.com
@@ -40,5 +45,19 @@ public class ApplyService extends BaseService<Apply> {
             throw new NotFoundException(apply.getResumeId());
         }
         return applyRepository.save(apply);
+    }
+    public List<JSONObject> getByJobList(List<String> jobIds) {
+        List<JSONObject> jsonObjects = new ArrayList<>();
+        for (String id:
+             jobIds) {
+            if (applyRepository.findByJobId(id) != null) {
+                Apply apply = applyRepository.findByJobId(id);
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("jobVO",jobServiceClient.getOne(apply.getJobId()).getData());
+                jsonObject.put("resumeVO",resumeServiceClient.getVOByResumeId(apply.getResumeId()).getData());
+                jsonObjects.add(jsonObject);
+            }
+        }
+        return jsonObjects;
     }
 }

@@ -13,4 +13,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ApplyRepository extends BaseRepository<Apply> {
     boolean existsByJobIdAndResumeId(String jobId, String resumeId);
+    Apply findByJobId(String id);
 }
