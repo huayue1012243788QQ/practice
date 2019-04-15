@@ -2,26 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c008349-f480-4259-883e-bd415ba19b6d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apply-service/src/main/java/com/huayue/applyservice/vo/ApplyVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apply-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apply-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apply-service/src/main/java/com/huayue/applyservice/client/ResumeServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/apply-service/src/main/java/com/huayue/applyservice/client/ResumeServiceClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apply-service/src/main/java/com/huayue/applyservice/controller/ApplyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/apply-service/src/main/java/com/huayue/applyservice/controller/ApplyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apply-service/src/main/java/com/huayue/applyservice/repository/ApplyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/apply-service/src/main/java/com/huayue/applyservice/repository/ApplyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apply-service/src/main/java/com/huayue/applyservice/service/ApplyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/apply-service/src/main/java/com/huayue/applyservice/service/ApplyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/CompanyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/CompanyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/JobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/JobController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/entity/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/repository/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/repository/CompanyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/repository/JobRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/repository/JobRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/service/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/service/CompanyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/service/JobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/service/JobService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/vo/IndustryVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/job/src/main/java/com/huayue/job/vo/IndustryVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/job/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/entity/PersonInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/resume/src/main/java/com/huayue/resume/entity/PersonInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/huayue/userservice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/huayue/userservice/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/huayue/userservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/huayue/userservice/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zuul/src/main/java/com/huayue/zuul/filter/MyFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/zuul/src/main/java/com/huayue/zuul/filter/MyFilter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -76,9 +57,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/JobController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="127" column="36" selection-start-line="127" selection-start-column="36" selection-end-line="127" selection-end-column="36" />
+            <state relative-caret-position="-396">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
+                <element signature="e#4828#4829#0" expanded="true" />
                 <element signature="e#4894#4895#0" expanded="true" />
               </folding>
             </state>
@@ -265,66 +247,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="resume" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="resume" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="resume" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="resume" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="resume" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="resume" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="practice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="practice" type="462c0819:PsiDirectoryNode" />
-              <item name="resume" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="resume" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -350,7 +273,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -396,7 +319,7 @@
     </option>
     <option name="contentProportion" value="0.2012987" />
   </component>
-  <component name="RunManager" selected="Spring Boot.JobApplication">
+  <component name="RunManager" selected="Spring Boot.EurekaServerApplication">
     <configuration name="AdminServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="admin-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.huayue.adminservice.AdminServiceApplication" />
@@ -514,7 +437,11 @@
       <workItem from="1554533140249" duration="26361000" />
       <workItem from="1554687375429" duration="23448000" />
       <workItem from="1554962523570" duration="5939000" />
-      <workItem from="1555233333303" duration="568000" />
+      <workItem from="1555233333303" duration="1515000" />
+      <workItem from="1555312284227" duration="181000" />
+      <workItem from="1555323560349" duration="152000" />
+      <workItem from="1555324109514" duration="64000" />
+      <workItem from="1555324210720" duration="441000" />
     </task>
     <task id="LOCAL-00001" summary="初次提交">
       <created>1553153922535</created>
@@ -551,11 +478,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554571840095</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="初步">
+      <created>1555235362996</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1555235362996</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="591863000" />
+    <option name="totallyTimeSpent" value="593723000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -654,7 +588,8 @@
     <MESSAGE value="跨域问题解决" />
     <MESSAGE value="某些api在无token状态下的放行" />
     <MESSAGE value="个人中心&#10;模板简历" />
-    <option name="LAST_COMMIT_MESSAGE" value="个人中心&#10;模板简历" />
+    <MESSAGE value="初步" />
+    <option name="LAST_COMMIT_MESSAGE" value="初步" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/common/src/main/java/com/huayue/common/enums/ExperienceType.java">
@@ -1017,9 +952,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/job/src/main/java/com/huayue/job/controller/JobController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="127" column="36" selection-start-line="127" selection-start-column="36" selection-end-line="127" selection-end-column="36" />
+        <state relative-caret-position="-396">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
+            <element signature="e#4828#4829#0" expanded="true" />
             <element signature="e#4894#4895#0" expanded="true" />
           </folding>
         </state>
