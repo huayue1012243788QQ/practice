@@ -1,7 +1,5 @@
 package com.huayue.userservice.entity;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.huayue.common.entity.SuperEntity;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
@@ -20,7 +18,7 @@ import java.util.List;
 @Entity
 @Table(name="sys_user")
 @Data
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class User extends SuperEntity implements UserDetails, Serializable {
     @Column(name="username")
     private String username;

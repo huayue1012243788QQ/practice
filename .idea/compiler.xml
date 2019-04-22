@@ -6,18 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="auth-service" />
-        <module name="user-service" />
-        <module name="resume-service" />
-        <module name="apply-service" />
-        <module name="job-service" />
-        <module name="admin-service" />
         <module name="zuul" />
-        <module name="ll" />
-        <module name="practice" />
         <module name="eureka-server" />
-        <module name="common" />
         <module name="auth-service (1)" />
+        <module name="apply-service" />
+        <module name="common" />
+        <module name="job-service" />
+        <module name="ll" />
+        <module name="resume-service" />
+        <module name="user-service" />
+        <module name="auth-service" />
+        <module name="admin-service" />
+        <module name="practice" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

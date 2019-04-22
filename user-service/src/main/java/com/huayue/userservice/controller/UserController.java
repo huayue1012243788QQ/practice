@@ -128,4 +128,9 @@ public class UserController {
         }
         return Result.success(user);
     }
+    @GetMapping("/getList")
+    public Object getList(@RequestParam int page,@RequestParam int size) {
+        page -= 1;
+        return Result.success(userService.getList(page,size));
+    }
 }

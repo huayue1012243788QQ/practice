@@ -99,13 +99,14 @@ public class JobController {
                                @RequestParam(required = false) Integer workTime,
                                @RequestParam(required = false) String educationRank,
                                @RequestParam(required = false) String city,
+                               @RequestParam(required = false) String jobTypeId,
                                @RequestParam Integer page,
                                @RequestParam Integer size) {
         page -= 1;
         if (size == 0) {
             size =1;
         }
-        Page<Job> jobs = jobService.queryForList(title,minSalary,maxSalary,workDay,workTime,educationRank,city,page,size);
+        Page<Job> jobs = jobService.queryForList(title,jobTypeId,minSalary,maxSalary,workDay,workTime,educationRank,city,page,size);
         return Result.success(jobs);
     }
     @PreAuthorize("hasAnyAuthority('ROLE_ADMIN','ROLE_REVIEWER')")
@@ -127,5 +128,10 @@ public class JobController {
     @GetMapping("/getUncheckJobList")
     public Object getUncheckList() {
         return Result.success(jobService.getUncheckList());
+    }
+    @GetMapping("/getList")
+    public Object getList(@RequestParam int page, @RequestParam int size) {
+        page -= 1;
+        return Result.success(jobService.getList(page,size));
     }
 }

@@ -92,6 +92,7 @@ public class JobService extends BaseService<Job> {
         jobRepository.deleteById(id);
     }
     public Page<Job> queryForList(String title,
+                                  String jobTypeId,
                                   Integer minSalary,
                                   Integer maxSalary,
                                   Integer workDay,
@@ -105,6 +106,9 @@ public class JobService extends BaseService<Job> {
             List<Predicate> predicates = new ArrayList<>();
             if (!StringUtils.isEmpty(title)) {
                 predicates.add(criteriaBuilder.like(root.get("title").as(String.class),"%" + title +"%"));
+            }
+            if (!StringUtils.isEmpty(jobTypeId)) {
+                predicates.add(criteriaBuilder.equal(root.get("jobTypeId").as(String.class),jobTypeId));
             }
             if (minSalary != null) {
                 predicates.add(criteriaBuilder.greaterThanOrEqualTo(root.get("minSalary").as(int.class),minSalary));
@@ -170,5 +174,18 @@ public class JobService extends BaseService<Job> {
             jobVOS.add(jobVO);
         }
         return jobVOS;
+    }
+    public Page<Job> getList(int page,int size) {
+        Pageable pageable = PageRequest.of(page,size, Sort.Direction.DESC,"id");
+        Page<Job> jobs = jobRepository.findAll(pageable);
+        for (Job job:
+                jobs.getContent()) {
+            Company company = companyRepository.findById(job.getCompanyId()).get();
+            Industry industry = industryRepository.findById(company.getIndustryId()).get();
+            industry.setIndustry(industryRepository.findById(industry.getParentId()).get());
+            company.setIndustry(industry);
+            job.setCompany(company);
+        }
+        return jobs;
     }
 }

@@ -53,11 +53,11 @@ public class RoleService extends BaseService<Role> {
     public List<Role> getUserRole() {
         List<Role> roles = new ArrayList<>();
         Role roleUser = roleRepository.findByName("ROLE_USER");
-        roleUser.setUsers(null);
+//        roleUser.setUsers(null);
         Role roleStu = roleRepository.findByName("ROLE_STU");
-        roleStu.setUsers(null);
+//        roleStu.setUsers(null);
         Role roleCom = roleRepository.findByName("ROLE_COMPANY");
-        roleCom.setUsers(null);
+//        roleCom.setUsers(null);
         roles.add(roleUser);
         roles.add(roleStu);
         roles.add(roleCom);

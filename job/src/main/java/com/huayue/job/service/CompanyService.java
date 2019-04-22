@@ -18,6 +18,10 @@ import com.huayue.job.repository.JobRepository;
 import com.huayue.job.repository.JobTypeRepository;
 import com.huayue.job.vo.CompanyVO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -138,5 +142,15 @@ public class CompanyService extends BaseService<Company> {
             companyVOS.add(companyVO);
         }
         return companyVOS;
+    }
+    public Page<Company> queryForList(int page,int size) {
+        Pageable pageable = PageRequest.of(page,size, Sort.Direction.DESC,"id");
+        Page<Company> companies = companyRepository.findAll(pageable);
+        for (Company company:
+             companies.getContent()) {
+            Industry industry = industryRepository.findById(company.getIndustryId()).get();
+            company.setIndustry(industry);
+        }
+        return companies;
     }
 }

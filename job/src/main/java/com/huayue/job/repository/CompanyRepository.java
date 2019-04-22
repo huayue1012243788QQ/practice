@@ -18,4 +18,5 @@ public interface CompanyRepository extends BaseRepository<Company> {
     boolean existsByUserId(String userId);
     List<Company> findByUserId(String userId);
     List<Company> findByChecked(String checked);
+    List<Company> findByNameLike(String companyName);
 }

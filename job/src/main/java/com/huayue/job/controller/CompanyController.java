@@ -122,4 +122,10 @@ public class CompanyController {
     public Object getUncheckCompanyList() {
         return Result.success(companyService.getUncheckList());
     }
+    @GetMapping("/queryForList")
+    public Object queryForList(@RequestParam int page,
+                               @RequestParam int size) {
+        page -= 1;
+        return Result.success(companyService.queryForList(page,size));
+    }
 }

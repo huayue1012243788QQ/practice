@@ -5,3 +5,4 @@
 19007 user-service
 19001 zuul-service
 19008 admin-service
+19009 apply-service

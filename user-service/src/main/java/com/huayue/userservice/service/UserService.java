@@ -17,6 +17,10 @@ import com.huayue.userservice.repository.RoleRepository;
 import com.huayue.userservice.repository.UserRepository;
 import com.huayue.userservice.util.BPwdEncoderUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -113,5 +117,10 @@ public class UserService extends BaseService<User> implements UserDetailsService
         User user = userRepository.findById(id).get();
         user.setAuthorities(roles);
         return userRepository.saveAndFlush(user);
+    }
+    public Page<User> getList(int page,int size) {
+        Pageable pageable = PageRequest.of(page,size, Sort.Direction.DESC,"id");
+        Page<User> users = userRepository.findAll(pageable);
+        return users;
     }
 }

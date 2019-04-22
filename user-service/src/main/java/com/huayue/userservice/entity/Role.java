@@ -6,9 +6,10 @@ import com.huayue.common.entity.SuperEntity;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * @author huayue.
@@ -18,7 +19,7 @@ import java.util.List;
 @Data
 @Table(name = "sys_role")
 @Entity
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Role extends SuperEntity implements GrantedAuthority, Serializable {
     @Column(name = "name")
     private String name;
@@ -26,11 +27,11 @@ public class Role extends SuperEntity implements GrantedAuthority, Serializable 
     private String remark;
     @Column(name = "del_flag")
     private boolean delFlag;
-    @ManyToMany(targetEntity = User.class,cascade = {CascadeType.PERSIST},fetch = FetchType.EAGER)
-    @JoinTable(name = "sys_user_role",
-            joinColumns = @JoinColumn(name = "role_id",referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "user_id",referencedColumnName = "id"))
-    private List<User> users;
+//    @ManyToMany(targetEntity = User.class,cascade = {CascadeType.PERSIST},fetch = FetchType.EAGER)
+//    @JoinTable(name = "sys_user_role",
+//            joinColumns = @JoinColumn(name = "role_id",referencedColumnName = "id"),
+//            inverseJoinColumns = @JoinColumn(name = "user_id",referencedColumnName = "id"))
+//    private List<User> users;
     @Override
     public String getAuthority() {
         return name;
